@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>BizVoice — Your Business. Your Voice. Your Invoice.</title>
+  <meta name="description" content="Create invoices, organise transactions and keep your business moving with BizVoice.">
+  <meta name="theme-color" content="#f5f5f0">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <!-- IMAGE-FIRST HERO -->
+    <section class="hero">
+
+      <svg class="hero-art" viewBox="0 0 1440 800"
+           preserveAspectRatio="xMidYMid slice"
+           aria-hidden="true">
+        <defs>
+          <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#063d25"/>
+            <stop offset="42%" stop-color="#168448"/>
+            <stop offset="70%" stop-color="#f5f5ed"/>
+            <stop offset="100%" stop-color="#ffffff"/>
+          </linearGradient>
+
+          <filter id="organic">
+            <feTurbulence type="fractalNoise"
+              baseFrequency="0.009 0.025"
+              numOctaves="3" seed="12"
+              result="noise"/>
+            <feDisplacementMap in="SourceGraphic"
+              in2="noise" scale="95"
+              xChannelSelector="R"
+              yChannelSelector="G"/>
+          </filter>
+
+          <filter id="soft">
+            <feGaussianBlur stdDeviation="18"/>
+          </filter>
+        </defs>
+
+        <rect width="1440" height="800" fill="#f8f8f2"/>
+
+        <g filter="url(#organic)">
+          <path d="M-100 80 C250 -80 430 260 700 150
+                   S1120 -50 1540 180 L1540 440
+                   C1200 300 1030 550 760 400
+                   S250 520 -100 330Z"
+                fill="#07552f"/>
+
+          <path d="M-120 420 C180 240 390 540 680 380
+                   S1110 250 1540 470 L1540 780
+                   C1200 600 1000 850 720 680
+                   S200 850 -120 680Z"
+                fill="#16834b"/>
+
+          <path d="M-100 620 C200 450 420 730 700 570
+                   S1120 450 1540 650 L1540 850
+                   L-100 850Z"
+                fill="#fdfdf8"/>
+        </g>
+
+        <g opacity=".35" filter="url(#soft)">
+          <path d="M-50 300 C300 100 550 450 850 250
+                   S1250 180 1500 350"
+                fill="none" stroke="#ffffff" stroke-width="100"/>
+          <path d="M-50 560 C280 380 520 690 850 490
+                   S1250 430 1500 590"
+                fill="none" stroke="#064d2b" stroke-width="90"/>
+        </g>
+      </svg>
+
+      <div class="hero-message">
+        <svg class="document-icon" viewBox="0 0 48 48"
+             aria-hidden="true">
+          <path d="M12 5h16l9 9v29H12z"
+                fill="none" stroke="white"
+                stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M28 5v10h9M18 24h13M18 31h13"
+                fill="none" stroke="white"
+                stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <h1>Free forever.</h1>
+        <p>Everyone deserves access to tech that earns.</p>
+      </div>
+    </section>
+
+    <!-- PRODUCT INTRODUCTION -->
+    <section class="product-intro">
+      <p class="eyebrow">MEET BIZVOICE</p>
+
+      <h2>BizVoice</h2>
+
+      <p class="tagline">
+        Your Business. Your Voice. Your Invoice.
+      </p>
+
+      <p class="description">
+        Speak, type or select your items.
+        Let the numbers take care of themselves.
+      </p>
+    </section>
+
+    <!-- SIMPLE PRODUCT PREVIEW -->
+    <section class="workspace" id="workspace">
+      <div class="workspace-heading">
+        <span>YOUR WORKSPACE</span>
+        <span class="status">Ready when you are</span>
+      </div>
+
+      <div class="invoice-preview">
+        <div>
+          <span class="field-label">INVOICE ITEM</span>
+          <input id="itemName" type="text"
+                 placeholder="e.g. Three shirts">
+        </div>
+
+        <div class="calculation">
+          <label>
+            <span class="field-label">QUANTITY</span>
+            <input id="quantity" type="number" min="1" value="1">
+          </label>
+
+          <span class="multiply">×</span>
+
+          <label>
+            <span class="field-label">UNIT PRICE (₦)</span>
+            <input id="price" type="number" min="0" placeholder="0">
+          </label>
+        </div>
+
+        <div class="total-row">
+          <span>Calculated total</span>
+          <strong id="total">₦0</strong>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FIXED COMPONENT TRAY -->
+  <nav class="component-tray" aria-label="BizVoice tools">
+    <div class="tray-tools">
+      <button class="tool active" data-tool="speak">
+        <span class="tool-icon">◉</span>
+        <span>Speak</span>
+      </button>
+
+      <button class="tool" data-tool="type">
+        <span class="tool-icon">T</span>
+        <span>Text</span>
+      </button>
+
+      <button class="tool" data-tool="inventory">
+        <span class="tool-icon">▤</span>
+        <span>Inventory</span>
+      </button>
+
+      <button class="tool" data-tool="calculate">
+        <span class="tool-icon">×</span>
+        <span>Calculate</span>
+      </button>
+    </div>
+
+    <div class="tray-promo">
+      <span class="promo-discount">50% OFF</span>
+      <span class="promo-copy">
+        Your next <strong>3-in-1 automation</strong>
+      </span>
+      <a href="mailto:hello@biznesscenta.ng">Explore offer ↗</a>
+    </div>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
